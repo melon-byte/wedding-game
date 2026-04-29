@@ -36,7 +36,8 @@ export default function Settlement() {
             <span className="sttt-pts">{totalBride}</span>
           </div>
           <div className="stt-vs">
-            <span>🍄</span><span>👊</span>
+            <div className="stt-mush">🍄</div>
+            <div className="stt-fist">👊</div>
           </div>
           <div className="stt-team groom">
             <span className="sttt-icon">🤵</span>

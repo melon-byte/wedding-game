@@ -227,8 +227,8 @@
 
 .npc-banner {
   display: flex; align-items: center; gap: 12px; justify-content: center;
-  padding: 16px; background: var(--gold-light); border-radius: var(--radius);
-  border: 1.5px solid var(--gold);
+  padding: 16px; background: var(--moss-light); border-radius: var(--radius);
+  border: 1.5px solid var(--moss);
 }
 
 .npcb-icon { font-size: 28px; flex-shrink: 0; }

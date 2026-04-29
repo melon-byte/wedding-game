@@ -170,7 +170,7 @@ export default function Checkpoint() {
                 </div>
                 <div className="npccb-row">
                   <span className="npccb-label">印记</span>
-                  <span className="npccb-value">🍄 {guest.phoneSuffix || '——'}</span>
+                  <span className="npccb-value">🎴 {guest.phoneSuffix || '——'}</span>
                 </div>
                 <div className="npccb-row">
                   <span className="npccb-label">选择</span>

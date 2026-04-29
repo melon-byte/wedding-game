@@ -12,11 +12,11 @@
 .adm-spell {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 18px; background: var(--bg-warm); border-radius: var(--radius-sm);
-  border: 1.5px solid var(--gold-light);
+  border: 1.5px solid var(--moss-light);
 }
 
 .adms-label { font-size: 15px; color: var(--text-light); font-family: 'Noto Serif SC', serif; }
-.adms-value { font-size: 32px; font-weight: 700; color: var(--gold); letter-spacing: 10px; font-family: 'Noto Serif SC', serif; }
+.adms-value { font-size: 32px; font-weight: 700; color: var(--moss); letter-spacing: 10px; font-family: 'Noto Serif SC', serif; }
 
 .adm-phases { display: flex; flex-direction: column; gap: 10px; }
 

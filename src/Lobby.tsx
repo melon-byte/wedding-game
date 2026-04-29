@@ -24,34 +24,31 @@ export default function Lobby() {
     : state.phase === 'playing' ? '🪲 探索林地'
     : '🌙 夜幕降临'
 
-  const pane = (column: 'bride' | 'groom') => {
-    const ids = column === 'bride' ? BRIDE_ATTRS : GROOM_ATTRS
-    return ids.map((cid) => {
-      const cp = CHECKPOINTS.find((c) => c.id === cid)!
-      const done = cid in guest.scores
-      const iconMap: Record<string, string> = {
-        communication: '🦋', aesthetic: '🌸', lifestyle: '🌱',
-        execution: '🦉', attitude: '🐗', choice: '🦌',
-      }
-      return (
-        <button key={cp.id}
-          className={`lobby-cp ${column}-cp${done ? ' done' : ''}`}
-          onClick={() => navigate(`/checkpoint/${cp.id}`)}
-          disabled={state.phase === 'settled'}
-        >
-          <span className="lcp-icon">{iconMap[cp.id]}</span>
-          <span className="lcp-body">
-            <span className="lcp-title">{cp.title}</span>
-            <span className="lcp-sub">{cp.subtitle.split('\n').map((line, i) => (
-              <span key={i}>{line}<br/></span>
-            ))}</span>
-          </span>
-          {done && (
-            <span className={`lcp-score ${column}-done-badge`}>{guest.scores[cid]}🍄</span>
-          )}
-        </button>
-      )
-    })
+  const renderCp = (column: 'bride' | 'groom', cid: string) => {
+    const cp = CHECKPOINTS.find((c) => c.id === cid)!
+    const done = cid in guest.scores
+    const iconMap: Record<string, string> = {
+      communication: '🦋', aesthetic: '🌸', lifestyle: '🌱',
+      execution: '🦉', attitude: '🐗', choice: '🦌',
+    }
+    return (
+      <button key={cp.id}
+        className={`lobby-cp ${column}-cp${done ? ' done' : ''}`}
+        onClick={() => navigate(`/checkpoint/${cp.id}`)}
+        disabled={state.phase === 'settled'}
+      >
+        <span className="lcp-icon">{iconMap[cp.id]}</span>
+        <span className="lcp-body">
+          <span className="lcp-title">{cp.title}</span>
+          <span className="lcp-sub">{cp.subtitle.split('\n').map((line, i) => (
+            <span key={i}>{line}<br/></span>
+          ))}</span>
+        </span>
+        {done && (
+          <span className={`lcp-score ${column}-done-badge`}>{guest.scores[cid]}🍄</span>
+        )}
+      </button>
+    )
   }
 
   return (
@@ -63,7 +60,7 @@ export default function Lobby() {
           <div className="lobby-info">
             <span className="lobby-name">{guest.name}</span>
             {guest.phoneSuffix && <span className="lobby-phone">🍄 尾号 {guest.phoneSuffix}</span>}
-            <span className="lobby-score">{guest.totalPoints} 分 · {completed}/6 块林地</span>
+            <span className="lobby-score">{guest.totalPoints} 🍄 · {completed}/6 块林地</span>
           </div>
           <button className="btn btn-outline btn-sm" onClick={() => navigate('/')}>变换</button>
         </div>
@@ -99,14 +96,14 @@ export default function Lobby() {
       </div>
 
       <div className="lobby-grid">
-        <div className="lobby-col bride-col">
-          <div className="lcol-header bride-hdr">👰 新娘支线</div>
-          {pane('bride')}
-        </div>
-        <div className="lobby-col groom-col">
-          <div className="lcol-header groom-hdr">🤵 新郎支线</div>
-          {pane('groom')}
-        </div>
+        <div className="lcol-header bride-hdr">👰 新娘支线</div>
+        <div className="lcol-header groom-hdr">🤵 新郎支线</div>
+        {BRIDE_ATTRS.map((cid, i) => (
+          <>
+            {renderCp('bride', cid)}
+            {renderCp('groom', GROOM_ATTRS[i])}
+          </>
+        ))}
       </div>
 
       <div className="lobby-actions">
@@ -144,7 +141,7 @@ export default function Lobby() {
           <div className="rule-step">
             <div className="rule-step-num">4</div>
             <div className="rule-step-title">评分</div>
-            <div className="rule-step-desc">NPC 根据表现<br/>打入 1~3 分</div>
+            <div className="rule-step-desc">NPC 根据表现<br/>打入 1~3 🍄</div>
           </div>
         </div>
         <div className="rule-detail">

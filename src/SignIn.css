@@ -8,8 +8,8 @@
 
 .signin-title-line { font-size: 30px; letter-spacing: 5px; }
 
-.signin-title-line:first-child { color: var(--gold); }
-.signin-title-line:last-child { color: var(--gold); }
+.signin-title-line:first-child { color: var(--moss); }
+.signin-title-line:last-child { color: var(--moss); }
 
 .signin-subtitle { color: var(--text-light); font-size: 16px; margin-top: 10px; }
 

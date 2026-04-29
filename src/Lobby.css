@@ -3,7 +3,7 @@
 .lobby-header { margin-bottom: 16px; }
 
 .lobby-phase {
-  display: inline-block; background: var(--gold-light); color: var(--primary-dark);
+  display: inline-block; background: var(--moss-light); color: #5a8a52;
   padding: 5px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; margin-bottom: 12px;
 }
 
@@ -53,10 +53,7 @@
 .lobby-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px;
   align-items: stretch;
-  grid-auto-rows: 1fr;
 }
-
-.lobby-col { display: flex; flex-direction: column; gap: 8px; width: 100%; min-width: 0; overflow: hidden; }
 
 .lcol-header {
   text-align: center; font-size: 14px; font-weight: 600; padding: 8px;

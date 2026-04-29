@@ -80,7 +80,7 @@ export default function Admin() {
                   <span className="ami-av">{g.avatar}</span>
                   <div className="ami-info">
                     <span className="ami-name">{g.name}{g.phoneSuffix && <span className="ami-ph"> · {g.phoneSuffix}</span>}</span>
-                    <span className="ami-meta">{g.totalPoints} 分 · {done}/{CHECKPOINTS.length} 林地</span>
+                    <span className="ami-meta">{g.totalPoints} 🍄 · {done}/{CHECKPOINTS.length} 林地</span>
                   </div>
                   {removeId === g.id ? (
                     <div className="ami-rmc">
