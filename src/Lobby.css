@@ -56,7 +56,7 @@
   grid-auto-rows: 1fr;
 }
 
-.lobby-col { display: flex; flex-direction: column; gap: 8px; }
+.lobby-col { display: flex; flex-direction: column; gap: 8px; width: 100%; }
 
 .lcol-header {
   text-align: center; font-size: 14px; font-weight: 600; padding: 8px;
@@ -73,6 +73,7 @@
   background: var(--card); cursor: pointer; transition: all 0.15s;
   text-align: center; gap: 6px;
   min-height: 130px;
+  width: 100%;
 }
 
 .lobby-cp:hover:not(:disabled) { border-color: var(--moss); transform: translateY(-1px); box-shadow: var(--shadow); }
