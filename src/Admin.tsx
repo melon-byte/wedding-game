@@ -103,13 +103,13 @@ export default function Admin() {
       <div className="adm-card adm-danger">
         <h3>⚠ 黑暗魔法</h3>
         {!confirmReset ? (
-          <button className="btn btn-outline btn-sm" style={{ borderColor: 'var(--red)', color: 'var(--red)' }}
+          <button className="btn btn-sm" style={{ background: 'var(--red)', color: '#fff' }}
             onClick={() => setConfirmReset(true)}>焚毁蘑菇之书</button>
         ) : (
           <div className="adm-reset">
             <p>此咒语将清除所有旅人足迹与蘑菇印记，不可逆转！</p>
             <span>
-              <button className="btn btn-primary btn-sm" onClick={handleReset}>确认焚毁</button>
+              <button className="btn btn-sm" style={{ background: 'var(--red)', color: '#fff' }} onClick={handleReset}>确认焚毁</button>
               <button className="btn btn-outline btn-sm" onClick={() => setConfirmReset(false)} style={{ marginLeft: 6 }}>取消</button>
             </span>
           </div>
