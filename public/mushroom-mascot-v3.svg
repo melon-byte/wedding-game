@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" width="400" height="420">
+  <defs>
+    <filter id="fluffy" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.15 0" in="noise" result="softNoise"/>
+      <feBlend mode="multiply" in="softNoise" in2="SourceGraphic" result="blended"/>
+    </filter>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#c44a2e" flood-opacity="0.25"/>
+    </filter>
+    <radialGradient id="capGrad" cx="45%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff7a6b"/>
+      <stop offset="40%" stop-color="#f25c4d"/>
+      <stop offset="80%" stop-color="#d94435"/>
+      <stop offset="100%" stop-color="#b83225"/>
+    </radialGradient>
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdf3d9"/>
+      <stop offset="100%" stop-color="#f0dcb0"/>
+    </linearGradient>
+    <radialGradient id="faceGrad" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fff8f0"/>
+      <stop offset="60%" stop-color="#fce8d5"/>
+      <stop offset="100%" stop-color="#f5d9c0"/>
+    </radialGradient>
+    <radialGradient id="blushGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff9999" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ff9999" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="400" rx="90" ry="18" fill="#c4a882" opacity="0.3"/>
+  <ellipse cx="200" cy="397" rx="65" ry="12" fill="#a88b6a" opacity="0.2"/>
+
+  <!-- body -->
+  <ellipse cx="200" cy="330" rx="85" ry="75" fill="url(#faceGrad)" filter="url(#softShadow)"/>
+
+  <!-- left arm -->
+  <ellipse cx="125" cy="315" rx="22" ry="16" fill="#fce8d5" transform="rotate(-20 125 315)"/>
+  <ellipse cx="125" cy="315" rx="22" ry="16" fill="url(#fluffy)" opacity="0.3" transform="rotate(-20 125 315)"/>
+
+  <!-- right arm -->
+  <ellipse cx="275" cy="315" rx="22" ry="16" fill="#fce8d5" transform="rotate(20 275 315)"/>
+  <ellipse cx="275" cy="315" rx="22" ry="16" fill="url(#fluffy)" opacity="0.3" transform="rotate(20 275 315)"/>
+
+  <!-- face: drawn BEFORE cap so cap covers upper face -->
+  <ellipse cx="200" cy="268" rx="74" ry="54" fill="url(#faceGrad)"/>
+  <ellipse cx="200" cy="268" rx="74" ry="54" fill="url(#fluffy)" opacity="0.15"/>
+
+  <!-- eyes -->
+  <circle cx="172" cy="262" r="7" fill="#2d2d2d"/>
+  <circle cx="174" cy="260" r="2.5" fill="#fff" opacity="0.85"/>
+  <circle cx="228" cy="262" r="7" fill="#2d2d2d"/>
+  <circle cx="230" cy="260" r="2.5" fill="#fff" opacity="0.85"/>
+
+  <!-- blush -->
+  <ellipse cx="155" cy="278" rx="18" ry="12" fill="url(#blushGrad)"/>
+  <ellipse cx="245" cy="278" rx="18" ry="12" fill="url(#blushGrad)"/>
+
+  <!-- mouth -->
+  <path d="M 192 272 Q 200 284, 208 272" fill="none" stroke="#d4776b" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 192 272 Q 200 280, 208 272 Z" fill="#e8887a" opacity="0.6"/>
+
+  <!-- cap main -->
+  <path d="M 200 60
+           C 100 60, 45 150, 45 235
+           C 45 248, 78 255, 200 255
+           C 322 255, 355 248, 355 235
+           C 355 150, 300 60, 200 60 Z"
+        fill="url(#capGrad)" filter="url(#softShadow)"/>
+
+  <!-- cap noise -->
+  <path d="M 200 60
+           C 100 60, 45 150, 45 235
+           C 45 248, 78 255, 200 255
+           C 322 255, 355 248, 355 235
+           C 355 150, 300 60, 200 60 Z"
+        fill="url(#capGrad)" filter="url(#fluffy)" opacity="0.35"/>
+
+  <!-- spots on cap (above rim) -->
+  <ellipse cx="140" cy="145" rx="14" ry="10" fill="#fff" opacity="0.9" transform="rotate(-15 140 145)"/>
+  <ellipse cx="260" cy="130" rx="11" ry="8" fill="#fff" opacity="0.85" transform="rotate(10 260 130)"/>
+  <ellipse cx="200" cy="110" rx="16" ry="11" fill="#fff" opacity="0.9"/>
+  <ellipse cx="105" cy="200" rx="9" ry="7" fill="#fff" opacity="0.8" transform="rotate(-25 105 200)"/>
+  <ellipse cx="295" cy="195" rx="10" ry="7" fill="#fff" opacity="0.8" transform="rotate(20 295 195)"/>
+  <ellipse cx="175" cy="185" rx="7" ry="5" fill="#fff" opacity="0.75"/>
+  <ellipse cx="235" cy="205" rx="8" ry="6" fill="#fff" opacity="0.75"/>
+  <ellipse cx="320" cy="225" rx="6" ry="5" fill="#fff" opacity="0.6" transform="rotate(15 320 225)"/>
+  <ellipse cx="80" cy="220" rx="5" ry="4" fill="#fff" opacity="0.55" transform="rotate(-20 80 220)"/>
+
+  <!-- cap highlight -->
+  <ellipse cx="170" cy="100" rx="35" ry="20" fill="#fff" opacity="0.12" transform="rotate(-10 170 100)"/>
+
+  <!-- cap rim: sits on top of face, bottom edge just above eyes -->
+  <path d="M 45 235
+           Q 63 245, 80 238 Q 98 250, 115 240 Q 133 252, 150 242
+           Q 168 254, 185 244 Q 203 255, 220 244 Q 238 254, 255 242
+           Q 273 252, 290 240 Q 308 250, 325 238 Q 343 245, 355 235
+           C 355 252, 325 260, 200 260
+           C 75 260, 45 252, 45 235 Z"
+        fill="url(#rimGrad)"/>
+
+  <!-- cap rim inner layer -->
+  <path d="M 55 242
+           Q 71 253, 88 243 Q 106 256, 123 246 Q 141 258, 158 247
+           Q 176 259, 193 249 Q 211 260, 228 249 Q 246 259, 263 247
+           Q 281 258, 298 246 Q 316 256, 333 243 Q 345 253, 345 242
+           Q 325 256, 200 256 Q 75 256, 55 242 Z"
+        fill="#fdf3d9" opacity="0.6"/>
+</svg>

@@ -1,0 +1,104 @@
+.lobby-page { padding-top: 16px; }
+
+.lobby-header { margin-bottom: 16px; }
+
+.lobby-phase {
+  display: inline-block; background: var(--gold-light); color: var(--primary-dark);
+  padding: 5px 16px; border-radius: 20px; font-size: 14px; font-weight: 500; margin-bottom: 12px;
+}
+
+.lobby-card {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--card); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow);
+}
+
+.lobby-avatar { font-size: 40px; flex-shrink: 0; }
+
+.lobby-info { flex: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+
+.lobby-name { font-size: 20px; font-weight: 600; font-family: 'Noto Serif SC', serif; }
+
+.lobby-phone { font-size: 14px; color: var(--text-light); }
+
+.lobby-score { font-size: 14px; color: var(--moss); font-weight: 500; }
+
+.lobby-switch { display: flex; align-items: center; gap: 10px; margin: 14px 0; flex-wrap: wrap; }
+
+.lsw-label { font-size: 14px; color: var(--text-light); }
+
+.lsw-btn {
+  width: 38px; height: 38px; border-radius: 50%; border: 1.5px solid var(--border);
+  background: var(--card); font-size: 18px; cursor: pointer; transition: all 0.2s;
+}
+
+.lsw-btn:hover { border-color: var(--moss); transform: scale(1.1); }
+
+.lobby-compass {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--card); border-radius: var(--radius); padding: 16px 20px;
+  margin-bottom: 18px; box-shadow: var(--shadow);
+}
+
+.lcomp-side { display: flex; flex-direction: column; align-items: center; gap: 5px; flex: 1; }
+.lcomp-icon { font-size: 32px; }
+.lcomp-label { font-size: 13px; color: var(--text-light); font-family: 'Noto Serif SC', serif; }
+.lcomp-val { font-size: 26px; font-weight: 700; font-family: 'Noto Serif SC', serif; }
+.lcomp-side.bride .lcomp-val { color: var(--primary); }
+.lcomp-side.groom .lcomp-val { color: var(--blue); }
+
+.lcomp-mid { text-align: center; }
+.lcomp-mush { font-size: 28px; }
+.lcomp-vs { font-size: 13px; color: var(--text-muted); font-family: 'Noto Serif SC', serif; }
+
+.lobby-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 22px;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
+
+.lobby-col { display: flex; flex-direction: column; gap: 8px; }
+
+.lcol-header {
+  text-align: center; font-size: 14px; font-weight: 600; padding: 8px;
+  border-radius: var(--radius-sm); font-family: 'Noto Serif SC', serif;
+}
+
+.bride-hdr { background: var(--primary-light); color: var(--primary-dark); }
+.groom-hdr { background: var(--blue-light); color: #4a7dba; }
+
+.lobby-cp {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 26px 12px 18px; border-radius: var(--radius-sm); border: 1.5px solid var(--border);
+  background: var(--card); cursor: pointer; transition: all 0.15s;
+  text-align: center; gap: 6px;
+}
+
+.lobby-cp:hover:not(:disabled) { border-color: var(--moss); transform: translateY(-1px); box-shadow: var(--shadow); }
+.lobby-cp.bride-cp:hover:not(:disabled) { border-color: var(--primary); }
+.lobby-cp.groom-cp:hover:not(:disabled) { border-color: var(--blue); }
+.lobby-cp:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.lcp-icon { font-size: 32px; line-height: 1; }
+
+.lcp-body {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+}
+
+.lcp-title { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.3; }
+
+.lcp-sub { font-size: 12px; color: var(--text-light); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+
+.lcp-score {
+  position: absolute; top: 8px; right: 8px;
+  font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 10px;
+  white-space: nowrap;
+}
+
+.bride-done-badge { color: #fff; background: var(--primary); box-shadow: 0 1px 4px rgba(212,132,156,0.3); }
+.groom-done-badge { color: #fff; background: var(--blue); box-shadow: 0 1px 4px rgba(123,168,212,0.3); }
+
+.lobby-cp.done.bride-cp { border-color: var(--primary-light); background: #fff5f7; }
+.lobby-cp.done.groom-cp { border-color: var(--blue-light); background: #f5f9fd; }
+
+.lobby-actions { display: flex; flex-direction: column; align-items: center; gap: 12px; }
