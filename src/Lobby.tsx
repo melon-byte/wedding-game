@@ -59,7 +59,7 @@ export default function Lobby() {
           <div className="lobby-avatar">{guest.avatar}</div>
           <div className="lobby-info">
             <span className="lobby-name">{guest.name}</span>
-            {guest.phoneSuffix && <span className="lobby-phone">🍄 尾号 {guest.phoneSuffix}</span>}
+            {guest.phoneSuffix && <span className="lobby-phone">🎴 尾号 {guest.phoneSuffix}</span>}
             <span className="lobby-score">{guest.totalPoints} 🍄 · {completed}/6 块林地</span>
           </div>
           <button className="btn btn-outline btn-sm" onClick={() => navigate('/')}>变换</button>
