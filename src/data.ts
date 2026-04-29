@@ -4,7 +4,7 @@ export const CHECKPOINTS: Checkpoint[] = [
   {
     id: 'communication',
     title: '沟通模式',
-    subtitle: '阿巴阿巴 vs 有话直说',
+    subtitle: '阿巴阿巴 👊 有话直说',
     themeA: '阿巴阿巴',
     themeB: '有话直说',
     descA: '你说我猜：用肢体比划、拟声或抽象描述让对方猜出目标词语。\n禁止说出词语中的任何一个字，考验非语言沟通与脑电波默契。\n每题限时 30s，可跳过最多 2 题。',
@@ -17,7 +17,7 @@ export const CHECKPOINTS: Checkpoint[] = [
   {
     id: 'aesthetic',
     title: '审美品味',
-    subtitle: '现实正经 vs 赛博抽象',
+    subtitle: '现实正经 👊 赛博抽象',
     themeA: '现实正经',
     themeB: '赛博抽象',
     descA: '正经审美挑战：从主办方提供的素材库（贴纸、色块、布料小样等）中，\n搭配出一组"正常且好看"的色彩/材质组合。\n讲究协调、和谐、有品位。',
@@ -30,7 +30,7 @@ export const CHECKPOINTS: Checkpoint[] = [
   {
     id: 'lifestyle',
     title: '生活取向',
-    subtitle: '安全区守望 vs 新大陆探险',
+    subtitle: '安全区守望 👊 新大陆探险',
     themeA: '安全区守望',
     themeB: '新大陆探险',
     descA: '再玩一次！选择一个你已经去过或者最喜欢、最擅长的点位，\n重新挑战一次（可挑战相同或不同的支线）。\n按该点位原有规则计分，得分直接叠加到角色卡。',
@@ -43,7 +43,7 @@ export const CHECKPOINTS: Checkpoint[] = [
   {
     id: 'execution',
     title: '执行力',
-    subtitle: '思前想后 vs 干了再说',
+    subtitle: '思前想后 👊 干了再说',
     themeA: '思前想后',
     themeB: '干了再说',
     descA: '目测迷宫：同时展示两幅迷宫图——其中一个有解（可从入口走到出口），\n另一个无解（死路，无法到达出口）。\n你只能在脑海中推理，不能用手或笔辅助描线。\n仅凭目测判断哪一幅有解。',
@@ -56,7 +56,7 @@ export const CHECKPOINTS: Checkpoint[] = [
   {
     id: 'attitude',
     title: '人生态度',
-    subtitle: '差不多得了 vs 就往死里卷',
+    subtitle: '差不多得了 👊 就往死里卷',
     themeA: '差不多得了',
     themeB: '就往死里卷',
     descA: '签签入扣：限时 2 min，从一大把彩色签子中逐一抽取，\n轻轻放到盘子上。每根签子接触盘子时，接触部分的颜色\n必须和签子自身颜色一致（盘子事先画好彩色区域）。\n如果中途签堆崩塌掉落，游戏立即结束。',
@@ -69,7 +69,7 @@ export const CHECKPOINTS: Checkpoint[] = [
   {
     id: 'choice',
     title: '取舍博弈',
-    subtitle: 'Peace&Love vs Survival&Glory',
+    subtitle: 'Peace&Love\n👊\nSurvival&Glory',
     themeA: 'Peace & Love',
     themeB: 'Survival & Glory',
     descA: '纸牌帮（或类似合作游戏）：5~6 位旅人组成一队，\n通力合作完成共同目标。需要沟通协商、资源分配、\n互相掩护。要么全员胜利，要么全员失败。',

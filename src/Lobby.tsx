@@ -42,7 +42,9 @@ export default function Lobby() {
           <span className="lcp-icon">{iconMap[cp.id]}</span>
           <span className="lcp-body">
             <span className="lcp-title">{cp.title}</span>
-            <span className="lcp-sub">{cp.subtitle}</span>
+            <span className="lcp-sub">{cp.subtitle.split('\n').map((line, i) => (
+              <span key={i}>{line}<br/></span>
+            ))}</span>
           </span>
           {done && (
             <span className={`lcp-score ${column}-done-badge`}>{guest.scores[cid]}🍄</span>
