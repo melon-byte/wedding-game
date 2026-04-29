@@ -50,12 +50,12 @@ export default function Checkpoint() {
       <div className={`cp-banner ${side}`}>
         <div className="cpb-top-row">
           <div className="cpb-tags">
-            <span className="cpbt-tag">{isBrideCp ? '👰 新娘支线' : '🤵 新郎支线'}</span>
             <span className="cpbt-tag">🍄 第 {CHECKPOINTS.indexOf(cp) + 1} 块林地</span>
             <span className="cpbt-tag">{cp.type === 'team' ? '👥 团队' : '👤 个人'}</span>
             <span className="cpbt-tag">⏱ {cp.duration}</span>
           </div>
         </div>
+        <div className="cpb-realm-emoji">{isBrideCp ? '👰' : '🤵'}</div>
         <div className="cpb-main">
           <div className="cpb-mushroom">{cpBigIcon}</div>
           <div className="cpb-info">

@@ -47,6 +47,17 @@
   position: relative; z-index: 1;
 }
 
+.cpb-realm-emoji {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-size: 64px;
+  line-height: 1;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .cpb-mushroom { font-size: 44px; flex-shrink: 0; line-height: 1; }
 
 .cpb-info { flex: 1; min-width: 0; text-align: left; }
