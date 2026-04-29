@@ -190,11 +190,8 @@
   box-shadow: var(--shadow);
 }
 
-.cp-call-btn { border: none !important; }
-.cp-call-btn.bride { background: var(--primary) !important; color: #fff !important; }
-.cp-call-btn.bride:hover { background: var(--primary-dark) !important; }
-.cp-call-btn.groom { background: var(--blue) !important; color: #fff !important; }
-.cp-call-btn.groom:hover { background: #5a8fc4 !important; }
+.cp-call-btn { border: none !important; background: var(--moss) !important; color: #fff !important; }
+.cp-call-btn:hover { background: #5a8a52 !important; }
 
 .cp-finished { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 20px; }
 
@@ -216,7 +213,7 @@
 
 .cpfc-chip {
   font-size: 18px; font-weight: 700; font-family: 'Noto Serif SC', serif;
-  color: var(--primary-dark); background: var(--bg-warm);
+  color: #5a8a52; background: var(--bg-warm);
   padding: 4px 14px; border-radius: 20px;
 }
 
@@ -237,7 +234,7 @@
 .npcb-icon { font-size: 28px; flex-shrink: 0; }
 
 .npc-banner span:last-child {
-  font-size: 16px; font-weight: 600; color: var(--primary-dark);
+  font-size: 16px; font-weight: 600; color: #5a8a52;
   font-family: 'Noto Serif SC', serif;
 }
 
@@ -251,11 +248,7 @@
 .npcc-header {
   font-size: 20px; font-weight: 700; text-align: center; padding: 16px;
   color: #fff; font-family: 'Noto Serif SC', serif;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-}
-
-.npcc-header.groom {
-  background: linear-gradient(135deg, var(--blue), #5a8fc4);
+  background: linear-gradient(135deg, var(--moss), #5a8a52);
 }
 
 .npcc-body { padding: 16px 18px; display: flex; flex-direction: column; gap: 0; }
@@ -281,15 +274,10 @@
   font-size: 16px; cursor: pointer; transition: all 0.2s;
 }
 
-.npc-score-btns.bride .npc-sb:hover { border-color: var(--primary-light); }
-.npc-score-btns.groom .npc-sb:hover { border-color: var(--blue-light); }
+.npc-score-btns .npc-sb:hover { border-color: var(--moss-light); }
 
-.npc-score-btns.bride .npc-sb.sel {
-  border-color: var(--primary); background: var(--primary-light);
-}
-
-.npc-score-btns.groom .npc-sb.sel {
-  border-color: var(--blue); background: var(--blue-light);
+.npc-score-btns .npc-sb.sel {
+  border-color: var(--moss); background: var(--moss-light);
 }
 
 .npc-auth { display: flex; flex-direction: column; gap: 12px; }
