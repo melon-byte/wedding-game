@@ -34,6 +34,7 @@ export default function Checkpoint() {
     const st = getGameState()
     setGameState(saveScoreFn(st, guest.id, cp.id, choice, score))
     setSaved(true)
+    if (navigator.vibrate) navigator.vibrate(50)
     setTimeout(() => navigate('/lobby'), 1600)
   }
 

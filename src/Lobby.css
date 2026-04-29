@@ -73,7 +73,9 @@
   width: 100%;
 }
 
-.lobby-cp:hover:not(:disabled) { border-color: var(--moss); transform: translateY(-1px); box-shadow: var(--shadow); }
+.lobby-cp.bride-cp { border-color: var(--primary-light); }
+.lobby-cp.groom-cp { border-color: var(--blue-light); }
+.lobby-cp:hover:not(:disabled) { transform: translateY(-1px); box-shadow: var(--shadow); }
 .lobby-cp.bride-cp:hover:not(:disabled) { border-color: var(--primary); }
 .lobby-cp.groom-cp:hover:not(:disabled) { border-color: var(--blue); }
 .lobby-cp:disabled { opacity: 0.5; cursor: not-allowed; }

@@ -121,8 +121,11 @@
   flex: 1; min-width: 0;
 }
 
-.cp-ch-btn.bride:hover { border-color: var(--primary-light); }
-.cp-ch-btn.groom:hover { border-color: var(--blue-light); }
+.cp-ch-btn.bride { border-color: var(--primary-light); }
+.cp-ch-btn.groom { border-color: var(--blue-light); }
+
+.cp-ch-btn.bride:hover { border-color: var(--primary); }
+.cp-ch-btn.groom:hover { border-color: var(--blue); }
 
 .cp-ch-btn.sel.bride { border-color: var(--primary); background: #fff5f7; box-shadow: var(--shadow); }
 .cp-ch-btn.sel.groom { border-color: var(--blue); background: #f5f9fd; box-shadow: var(--shadow); }
