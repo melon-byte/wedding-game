@@ -72,6 +72,7 @@
   padding: 26px 12px 18px; border-radius: var(--radius-sm); border: 1.5px solid var(--border);
   background: var(--card); cursor: pointer; transition: all 0.15s;
   text-align: center; gap: 6px;
+  min-height: 130px;
 }
 
 .lobby-cp:hover:not(:disabled) { border-color: var(--moss); transform: translateY(-1px); box-shadow: var(--shadow); }
