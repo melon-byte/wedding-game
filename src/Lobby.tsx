@@ -30,8 +30,8 @@ export default function Lobby() {
       const cp = CHECKPOINTS.find((c) => c.id === cid)!
       const done = cid in guest.scores
       const iconMap: Record<string, string> = {
-        communication: '💬', aesthetic: '🎨', lifestyle: '🎁',
-        execution: '⚡', attitude: '🎯', choice: '🎲',
+        communication: '🦋', aesthetic: '🌸', lifestyle: '🌱',
+        execution: '🦉', attitude: '🐗', choice: '🦌',
       }
       return (
         <button key={cp.id}

@@ -37,10 +37,6 @@ export default function Checkpoint() {
     setTimeout(() => navigate('/lobby'), 1600)
   }
 
-  const cpIcon =
-    cp.id === 'communication' ? '💬' : cp.id === 'aesthetic' ? '🎨' : cp.id === 'lifestyle' ? '🎁'
-    : cp.id === 'execution' ? '⚡' : cp.id === 'attitude' ? '🎯' : '🎲'
-
   const cpBigIcon =
     cp.id === 'communication' ? '🦋' : cp.id === 'aesthetic' ? '🌸' : cp.id === 'lifestyle' ? '🌱'
     : cp.id === 'execution' ? '🦉' : cp.id === 'attitude' ? '🐗' : '🦌'
@@ -53,8 +49,8 @@ export default function Checkpoint() {
 
       <div className={`cp-banner ${side}`}>
         <div className="cpb-top-row">
-          <span className="cpb-realm">{isBrideCp ? '👰 新娘支线' : '🤵 新郎支线'}</span>
           <div className="cpb-tags">
+            <span className="cpbt-tag">{isBrideCp ? '👰 新娘支线' : '🤵 新郎支线'}</span>
             <span className="cpbt-tag">🍄 第 {CHECKPOINTS.indexOf(cp) + 1} 块林地</span>
             <span className="cpbt-tag">{cp.type === 'team' ? '👥 团队' : '👤 个人'}</span>
             <span className="cpbt-tag">⏱ {cp.duration}</span>
@@ -107,8 +103,7 @@ export default function Checkpoint() {
             <button className={`cp-ch-btn ${side}${choice === cp.themeA ? ' sel' : ''}`}
               onClick={() => setChoice(cp.themeA)}>
               <div className="cpch-top">
-                <span className="cpch-emoji">{cpIcon}</span>
-                <span className="cpch-letter">🅰</span>
+                <span className="cpch-letter">A</span>
                 <span className="cpch-theme">{cp.themeA}</span>
               </div>
               <p className="cpch-desc">{cp.descA.split('\n').map((line, i) => (
@@ -127,15 +122,14 @@ export default function Checkpoint() {
 
             <div className="cp-divider">
               <span className="cpd-line"></span>
-              <span className="cpd-icon">VS</span>
+              <span className="cpd-icon">👊</span>
               <span className="cpd-line"></span>
             </div>
 
             <button className={`cp-ch-btn ${side}${choice === cp.themeB ? ' sel' : ''}`}
               onClick={() => setChoice(cp.themeB)}>
               <div className="cpch-top">
-                <span className="cpch-emoji">{cpIcon}</span>
-                <span className="cpch-letter">🅱</span>
+                <span className="cpch-letter">B</span>
                 <span className="cpch-theme">{cp.themeB}</span>
               </div>
               <p className="cpch-desc">{cp.descB.split('\n').map((line, i) => (

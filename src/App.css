@@ -50,7 +50,7 @@ html, body {
 }
 
 body {
-  background-image: url('/bg-mushroom.png');
+  background-image: url('/bg-mushroom.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

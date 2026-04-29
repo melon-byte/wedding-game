@@ -32,7 +32,7 @@
 }
 
 .cpb-top-row {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: center;
   margin-bottom: 14px; position: relative; z-index: 1;
 }
 
@@ -56,7 +56,7 @@
 
 .cp-banner.groom .cpb-info h2 { color: #4a7dba; }
 
-.cpb-tags { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.cpb-tags { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
 
 .cpbt-tag {
   font-size: 12px; color: var(--text-muted); background: rgba(255,255,255,0.55);
@@ -101,12 +101,13 @@
 .cpps-line.active { background: var(--primary); }
 .cp-progress-steps.groom .cpps-line.active { background: var(--blue); }
 
-.cp-choices { display: flex; flex-direction: column; gap: 0; margin-bottom: 18px; }
+.cp-choices { display: flex; flex-direction: row; gap: 10px; margin-bottom: 18px; align-items: stretch; }
 
 .cp-ch-btn {
   border-radius: var(--radius); border: 2px solid var(--border); background: var(--card);
-  cursor: pointer; transition: all 0.2s; text-align: left; padding: 20px 18px;
-  display: flex; flex-direction: column; gap: 12px;
+  cursor: pointer; transition: all 0.2s; text-align: left; padding: 16px 12px;
+  display: flex; flex-direction: column; gap: 10px;
+  flex: 1; min-width: 0;
 }
 
 .cp-ch-btn.bride:hover { border-color: var(--primary-light); }
@@ -115,10 +116,9 @@
 .cp-ch-btn.sel.bride { border-color: var(--primary); background: #fff5f7; box-shadow: var(--shadow); }
 .cp-ch-btn.sel.groom { border-color: var(--blue); background: #f5f9fd; box-shadow: var(--shadow); }
 
-.cpch-top { display: flex; align-items: center; gap: 10px; }
+.cpch-top { display: flex; align-items: center; gap: 8px; }
 
-.cpch-emoji { font-size: 24px; }
-.cpch-letter { font-size: 18px; font-weight: 700; }
+.cpch-letter { font-size: 16px; font-weight: 700; color: var(--text-muted); }
 
 .cpch-theme {
   font-size: 17px; font-weight: 700; font-family: 'Noto Serif SC', serif;
@@ -128,15 +128,15 @@
 .cp-ch-btn.groom .cpch-theme { color: #4a7dba; }
 
 .cpch-desc {
-  font-size: 14px; color: var(--text); line-height: 1.8;
-  padding-left: 34px; margin: 0;
+  font-size: 13px; color: var(--text); line-height: 1.7;
+  margin: 0;
 }
 
 .cpch-desc span { display: block; }
 
 .cpch-rules-box {
-  margin-left: 34px; background: rgba(143,185,130,0.08); border-radius: 10px;
-  padding: 14px 16px; border: 1px solid var(--moss-light);
+  background: rgba(143,185,130,0.08); border-radius: 10px;
+  padding: 12px 14px; border: 1px solid var(--moss-light);
 }
 
 .cpch-rules-title {
@@ -154,15 +154,15 @@
 .cpchr-marker { flex-shrink: 0; font-size: 12px; }
 
 .cp-divider {
-  display: flex; align-items: center; gap: 12px; margin: 16px 0;
+  display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 0 4px;
 }
 
-.cpd-line { flex: 1; height: 1px; background: var(--border); }
+.cpd-line { flex: 1; width: 1px; background: var(--border); }
 
 .cpd-icon {
-  font-size: 13px; font-weight: 700; color: var(--text-muted);
-  font-family: 'Noto Serif SC', serif; background: var(--card);
-  padding: 4px 12px; border-radius: 12px; border: 1px solid var(--border);
+  font-size: 16px;
+  background: var(--card);
+  padding: 4px; border-radius: 50%;
 }
 
 .cp-call-btn { border: none !important; }

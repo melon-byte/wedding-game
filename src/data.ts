@@ -69,7 +69,7 @@ export const CHECKPOINTS: Checkpoint[] = [
   {
     id: 'choice',
     title: '取舍博弈',
-    subtitle: 'Peace & Love vs Survival & Glory',
+    subtitle: 'Peace&Love vs Survival&Glory',
     themeA: 'Peace & Love',
     themeB: 'Survival & Glory',
     descA: '纸牌帮（或类似合作游戏）：5~6 位旅人组成一队，\n通力合作完成共同目标。需要沟通协商、资源分配、\n互相掩护。要么全员胜利，要么全员失败。',
